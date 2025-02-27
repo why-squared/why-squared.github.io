@@ -4,34 +4,50 @@
   <meta charset="UTF-8">
   <title>Why Squared, LLC</title>
   <style>
-    /* Reset default margins */
+
     body {
-      margin: 0;
+      padding: 3rem;
       height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #000;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      background-color: #000000;
     }
 
-    /* Styling for bubble text with animated color shift and movement */
     .bubble-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
       font-size: 4rem;
+      max-width: 17rem;
+      padding: 1.6rem;
       font-weight: bold;
       font-family: 'Arial', sans-serif;
+      line-height: 98%;
       /* Create a high-tech gradient that will animate */
       background: linear-gradient(45deg, #0ff, #f0f, #ff0, #0f0);
       background-size: 400% 400%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      /* Animation for color shifting */
+
+      border: 30px solid;
+      border-radius: 2rem;
+      overflow: hidden;
+      border-image: linear-gradient(45deg, #0ff, #f0f, #ff0, #0f0) 0.5;
+
       animation: colorShift 5s ease infinite, float 3s ease-in-out infinite alternate;
-      /* Bubble effect via subtle text shadows */
+      filter: url(#ripple);
+
       text-shadow: 
         0 0 5px rgba(255,255,255,0.5),
         0 0 10px rgba(255,255,255,0.5),
         0 0 20px rgba(255,255,255,0.5);
+
+      z-index: 1;
     }
+
+
 
     /* Keyframes for the gradient animation */
     @keyframes colorShift {
@@ -40,14 +56,16 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Keyframes for subtle vertical floating movement */
-    @keyframes float {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-20px); }
-    }
+
+
   </style>
 </head>
 <body>
+
+
+
+
+
   <div class="bubble-text">Why Squared, LLC</div>
 </body>
 </html>
