@@ -23,7 +23,8 @@
       font-size: 4rem;
       max-width: 17rem;
       padding: 1.6rem;
-      margin: 3rem;
+      margin-left: 3.3rem;
+      margin-bottom: 4rem;
       font-weight: bold;
       font-family: 'Arial', sans-serif;
       line-height: 98%;
@@ -33,18 +34,22 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
-      border: 30px solid;
-      border-radius: 2rem;
-      overflow: hidden;
+      border: .6rem solid;
+      overflow: visible;
       border-image: linear-gradient(45deg, #0ff, #f0f, #ff0, #0f0) 0.5;
 
-      animation: colorShift 5s ease infinite, float 3s ease-in-out infinite alternate;
-      filter: url(#ripple);
+
+
+      animation: 
+        colorShift 5s ease infinite, 
+        glowPulse 3s ease-in-out infinite alternate;
+
+
 
       text-shadow: 
-        0 0 5px rgba(255,255,255,0.5),
-        0 0 10px rgba(255,255,255,0.5),
-        0 0 20px rgba(255,255,255,0.5);
+        0 0 3px rgba(255,255,255,0.5),
+        0 0 8px rgba(255,255,255,0.5),
+        0 0 15px rgba(255,255,255,0.5);
 
       z-index: 1;
     }
@@ -59,6 +64,18 @@
     }
 
 
+
+    @media (max-width: 800px) {
+      body {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bubble-text {
+        margin-left: 0;
+        margin-bottom: 1rem;
+      }
+    }
 
   </style>
 </head>
